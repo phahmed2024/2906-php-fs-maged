@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 style="color:red"
+    >Ahmed Zakaria
+
+    </h1>
+    <p style="color:cyan"
+    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quae fugiat. Earum, itaque dignissimos ex odit error quisquam consequuntur dolorem. Perspiciatis, numquam! Laudantium neque quasi tempore similique incidunt aperiam ad?</p>
+
+
 </body>
 </html>
