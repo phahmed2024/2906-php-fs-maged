@@ -40,3 +40,11 @@ git reset HEAD~
 
 # clone (copy) someone's repo
 git clone repo link -> get from the green button in the repo
+# change branch from master to main
+git branch -m master main
+# link to repo in folder without making new folder
+git remote add origin repo_link
+
+
+
+
