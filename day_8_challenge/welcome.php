@@ -18,7 +18,12 @@
                 "Delivered", "Shipped", "Reviewed" => "green",
                 default => "black"
             };
-            echo "Status Result color is: <span style='color: $color ;'>  $color </span>";
+            if ($color == 'black') {
+                echo "No Mach !!!! <span style='color: $color ;'>  $color </span>";
+            } else {
+                echo "Status Result color is: <span style='color: $color ;'>  $color </span>";
+            }
+
             ?>
         </div>
     </div>
