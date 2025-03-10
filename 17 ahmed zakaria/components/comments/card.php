@@ -2,7 +2,7 @@
 
 session_start();
 
-dd($comments);
+dd($_POST);
 ?>
 <!DOCTYPE html>
 <html lang="en">
