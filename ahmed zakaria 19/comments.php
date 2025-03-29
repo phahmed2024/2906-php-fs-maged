@@ -283,11 +283,11 @@ if (!$post_id)
 <h1 style="text-align:center;">Comments</h1>
 
 <?php
-$comments =Comment\ Comment::show_comment($post_id);
+$comments =App\Models\Comment::show_comment($post_id);
 
 
 foreach ($comments as $comment) {
-    $replies = Reply::all($comment['id']);
+    $replies = App\Models\Reply::all_rep($comment['id']);
     require 'components/comments/card.php';
 }
 ?>

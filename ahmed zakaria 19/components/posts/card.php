@@ -60,7 +60,12 @@
         font-weight: 900;
         font-size: 20px;
     }
-
+a{
+    color:rgb(36, 10, 185);
+        font-weight: 900;
+        font-size: 15px; 
+        text-decoration: none;
+}
     .content .text {
         display: block;
         color: rgba(0, 137, 78, 0.7647058824);
@@ -290,7 +295,7 @@
 
 
 <!-- From Uiverse.io by Smit-Prajapati -->
-<form action="components\comments\card.php" enctype="multipart/form-data" method="post">
+<form action="comments.php" enctype="multipart/form-data" method="post">
     <div class="parent">
         <div class="card">
             <div class="logo">
@@ -304,7 +309,7 @@
                 <span class="text"> <?= $post['body']; ?></span>
                 <div class="flex">
                     <span class="post_editor">Post Type: <span><?= $post['type']; ?></span></span>
-                    <div class="post_editor">Posted by:<a href="/users.php?user_id=<?= $post['user_id']; ?>"><?= $post['name']; ?></a></div>
+                    <div class="post_editor">Posted by <br/><a href="/users.php?user_id=<?= $post['user_id']; ?>"><?= $post['name']; ?></a></div>
                </div>
                 <h3>Reactions</h3>
                 <div class="reactions">
@@ -313,12 +318,12 @@
                         foreach ($reactions as $reaction): ?>
 
                             
-                                <span> <?= $reaction['type'] == "Love" ? $reaction['count']."❤️️ LOVE" : '' ?></span>
-                                <span> <?= $reaction['type'] == "Like" ? $reaction['count'] ."👍 Like" : '' ?></span>
-                                <span> <?= $reaction['type'] == "Care" ?  $reaction['count']."💌 Care" : '' ?></span>
-                                <span> <?= $reaction['type'] == "Happy" ? $reaction['count'] ."😊 Happy" : '' ?></span>
-                                <span> <?= $reaction['type'] == "Sad" ? $reaction['count'] ."😥 Sad" : '' ?></span>
-                                <span> <?= $reaction['type'] == "Laught" ? $reaction['count']. "😂 Laught" : '' ?></span>
+                                <span> <?= $reaction['type'] == "Love" ? $reaction['count'] . " ❤️️ Love" : '' ?></span>
+                                <span> <?= $reaction['type'] == "Like" ? $reaction['count'] . " 👍 Like" : '' ?></span>
+                                <span> <?= $reaction['type'] == "Care" ?  $reaction['count'] . " 💌 Care" : '' ?></span>
+                                <span> <?= $reaction['type'] == "Happy" ? $reaction['count'] . " 😊 Happy" : '' ?></span>
+                                <span> <?= $reaction['type'] == "Sad" ? $reaction['count'] ." 😥 Sad" : '' ?></span>
+                                <span> <?= $reaction['type'] == "Laught" ? $reaction['count'] . " 😂 Laught" : '' ?></span>
                          
 
 
@@ -361,4 +366,5 @@
             </div>
         </div>
     </div>
+    
 </form>

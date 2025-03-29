@@ -13,7 +13,14 @@
 require_once 'load.php';
 
 
-$users = User\User::show_user($user_id);
+$user_id = $_GET['user_id'] ?? null;
+
+if (!$user_id)
+    header('Location: /');
+
+use App\Models\User;
+
+$user = User::show_user($user_id);
 
 
 require 'components/users/card.php';
